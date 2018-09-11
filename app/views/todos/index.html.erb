@@ -1,0 +1,32 @@
+<div class ="container">
+<br>
+<br>
+<br>
+<table class="table">
+  <tbody>
+    <% @todo.each do |todo| %>
+      <tr class= "well">
+        <td><%= todo.description %></td>
+        <td><%= todo.completed %></td>
+        <td><%= todo.created_at %></td>
+        <td><%= link_to 'Ver', todo, class:'btn btn-info' %></td>
+        <td><%= link_to 'Editar', edit_todo_path(todo), class:'btn btn-primary' %></td>
+        <td><%= link_to 'Borrar', todo, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-warning' %></td>
+        <td><%= link_to 'Completado', complete_todo_path(todo), class:'btn btn-danger' %></td>
+      </tr>
+      
+      
+    <% end %>
+  </tbody>
+<table>
+
+<%= link_to 'Nuevo', todos_new_path, class:'btn btn-success' %>
+  
+ 
+</br>
+</br>
+</br>
+</div> 
+
+
+

@@ -1,0 +1,6 @@
+
+<%= form_with model: @todo, local: true do |f| %>
+  <%= f.label :title, "Crear ToDo" %>
+  <%= f.text_field :description %>
+  <%= f.submit "Enviar" %>
+  <% end %>
